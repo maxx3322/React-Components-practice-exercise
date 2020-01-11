@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 const date = new Date();
 const currentTime = date.getHours();
@@ -21,9 +20,12 @@ if (currentTime < 12) {
   customStyle.color = "blue";
 }
 
-ReactDOM.render(
-  <h1 className="heading" style={customStyle}>
-    {greeting}
-  </h1>,
-  document.getElementById("root")
-);
+function Heading() {
+  return (
+    <h1 className="heading" style={customStyle}>
+      {greeting}
+    </h1>
+  );
+}
+
+export default Heading;
